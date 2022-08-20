@@ -1,15 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+@font-face {
+    font-family:"xilosa_";
+    src: url("../fonte/xilosa_.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'xilosa_'
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 #confetti-canvas{
     position: absolute;
     top: 0;
+}
+
+.dicas{
+    font-size: 40px;
 }
 
 .container{
@@ -19,7 +30,7 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 12px;
+    padding-bottom: 16px;
 }
 
 .navbar{
@@ -127,6 +138,12 @@ h1{
 }
 
 
+.xilogravura{
+    position: absolute;
+    left: 0;
+    width: 170px;
+    top:700px
+}
 
 /* PosClasse */
 .incorrect{
@@ -147,3 +164,12 @@ h1{
     color: #fff;
     border: none;
 }
+
+@media only screen and (max-width: 800px) {
+    .xilogravura {
+        position: absolute;
+        left: 0;
+        width: 100px;
+        top:400px
+    }
+  }
