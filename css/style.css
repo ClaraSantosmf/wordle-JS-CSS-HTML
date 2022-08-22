@@ -164,7 +164,7 @@ h1{
     border: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .xilogravura {
         position: absolute;
         left: 0;
