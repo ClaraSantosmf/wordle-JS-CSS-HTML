@@ -1,0 +1,33 @@
+1 ) Colorir o teclado. 
+https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage
+2) criptografia das letras
+3) colocar modal box  com as regras. How to create a modal box
+4 ) Colocar o Window.localStorage ou cookings - FEITO!!
+http://lucasmaiaesilva.com.br/posts/criando-modal-simples-com-html-e-css/
+https://satellasoft.com/artigo/html/criando-modal-com-html-e-javascript-puro
+https://www.w3schools.com/howto/howto_css_modals.asp
+5) tirar esse enter intrometido - FEITO!
+
+
+## Armazenando dados no Navegador com localStorage 
+
+Documentação : https://developer.mozilla.org/pt-BR/docs/Web/API/Storage/setItem
+
+O localStorage fica na aba application browser, dentro de storage. Se baseia na API de armazenamento web.
+
+### O que é a API de armazenamento da Web?
+A API de armazenamento da Web é um conjunto de mecanismos que permitem que os navegadores armazenem pares de valores-chave. Ele foi projetado para ser muito mais intuitivo do que usar cookies.
+
+Os pares de valores-chave representam objetos de armazenamento, que são semelhantes a objetos, exceto que permanecem intactos durante o carregamento da página e são sempre strings. 
+
+Como inserir elementos no localStore pela função setItem. 
+- localStorage.setItem('chave', 'valor');
+Pegar item no localStore pela função getItem
+- getItem(''), o parametro deve ser a chave. 
+Retirar um item no localStore, o parametro deve ser com a chave.
+- removeItem('')
+Para limpar o localStore
+- clear()
+
+onload localstorage getItem? 
+localStorange.getItem('l1') é null? Se não for, carrega tudo. 

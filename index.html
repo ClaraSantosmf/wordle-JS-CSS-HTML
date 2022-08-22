@@ -7,7 +7,7 @@
   <title>Wordle Clone - Busertech 2022</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body onload="armazemDeLocalStorage()">
   <div class="container">
     <nav class="navbar">
       <h1>Wordle Nordestino</h1>
@@ -57,7 +57,7 @@
       </div>
     </div>
 
-    <div class="dicas"><p> Dica: <span id="dica"></span> </p></div>
+    <div class="dicas"><p><span id="dica"></span> </p></div>
     
     <div class="teclado" onclick="tecladoVirtual(event)">
       <div class="linha-tecla">
@@ -93,11 +93,12 @@
         <button class="tecla">B</button>
         <button class="tecla">N</button>
         <button class="tecla">M</button>
-        <button class="tecla delete"><img class=" delete-button-backspace" src="./image/icone-backspace.svg" alt=""></button>
+        <button class="tecla delete">DELETE</button>
       </div>
     </div>
     <div class="xilo"><img class="xilogravura" src="./image/xilogravura.jpg" alt=""></div>
   </div>
+  <script src="./script/palavras.js"></script>
   <script src="./script/confetis.js"></script>
   <script src="./script/wordle.js"></script>
   <canvas id="my-canvas"></canvas>
