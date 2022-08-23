@@ -94,7 +94,7 @@ function ouvinteDeTeclas(key) {
             linha += 1
             return;
         } else {
-            alert('Essa palavra não existe.')
+            alert(`A palavra ${entrada} não existe em nosso banco de dados.`)
         }
     }
 
