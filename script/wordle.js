@@ -86,6 +86,10 @@ function ouvinteDeTeclas(key) {
     }
 
     if (char == 'ENTER') {
+        if (entrada.length != 5) {
+            alert('Precisamos de uma palavra de 5 letras')
+            return false
+        }
         if (wordList.includes(entrada.join(''))) {
             validarEntrada()
             if (linha > 6) {
@@ -94,7 +98,7 @@ function ouvinteDeTeclas(key) {
             linha += 1
             return;
         } else {
-            alert(`A palavra ${entrada} não existe em nosso banco de dados.`)
+            alert(`A palavra ${entrada.join('')} não existe em nosso banco de dados.`)
         }
     }
 
@@ -160,10 +164,6 @@ function carregandoLocalStorage(itensDoLocalStorage) {
 }
 
 function validarEntrada() {
-    if (entrada.length != 5) {
-        alert('Precisamos de uma palavra de 5 letras')
-        return false
-    }
     // Construindo localstore
     palavrasTentadas[linha - 1] = entrada.join('')
     if (jogoComecou) localStorage.setItem('palavras', JSON.stringify(palavrasTentadas))
@@ -171,6 +171,10 @@ function validarEntrada() {
     if (entrada.join('') == palavraDoDia.toUpperCase()) {
         for (i = 0; i < 5; i++) {
             document.getElementById(`l${linha}c${i + 1}`).classList.add("fullcorrect")
+            classeDeColorir = "fullcorrect"
+        }
+        for (letra of entrada){
+            pintar_teclado(letra, classeDeColorir)
         }
         venceuJogo()
         return
@@ -183,7 +187,9 @@ function validarEntrada() {
         let letra = entrada[i];
         if (letra == palavraDoDia[i]) {
             document.getElementById(`l${linha}c${i + 1}`).classList.add("fullcorrect")
+            classeDeColorir = "fullcorrect"
             ocorrenciaDaEntrada[letra] = (ocorrenciaDaEntrada[letra] || 0) + 1
+            pintar_teclado(letra, classeDeColorir)
             continue
 
         }
@@ -192,10 +198,14 @@ function validarEntrada() {
         if (palavraDoDia.includes(letra) && (ocorrenciaDaEntrada[letra] || 0) < ocorrenciasPalavraDoDia[letra]) {
             document.getElementById(`l${linha}c${i + 1}`).classList.add("correct")
             ocorrenciaDaEntrada[letra] = (ocorrenciaDaEntrada[letra] || 0) + 1
+            classeDeColorir = "correct"
+            pintar_teclado(letra, classeDeColorir)
             continue
 
         }
         document.getElementById(`l${linha}c${i + 1}`).classList.add("incorrect")
+        classeDeColorir = "incorrect"
+        pintar_teclado(letra, classeDeColorir)
     }
     entrada = []
 
@@ -205,6 +215,10 @@ function validarEntrada() {
     return true
 
 
+}
+
+function pintar_teclado(letra, classeDeColorir){
+    document.getElementById(`${letra}`).classList.add(classeDeColorir)
 }
 
 function passarTeclaApertada(e) { return ouvinteDeTeclas(e.key.toUpperCase()) }
@@ -223,10 +237,6 @@ function tecladoVirtual(event) {
 document.body.addEventListener('keydown', passarTeclaApertada)
 document.getElementById("dica").innerText = dica
 
-
-// const ocorrencias = Object.assign({}, ocorrenciasPalavraDoDia)
 // DESAFIOS
 // share, como compartilhar nas redes sociais? Tudo verdinho quando acabei
-// Palavra válida - listar palavras com cinco eltras com uma constante
-// navegador sabe que é tres vezes
 
