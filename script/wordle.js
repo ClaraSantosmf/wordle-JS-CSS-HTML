@@ -221,6 +221,8 @@ function pintar_teclado(letra, classeDeColorir){
     document.getElementById(`${letra}`).classList.add(classeDeColorir)
 }
 
+
+
 function passarTeclaApertada(e) { return ouvinteDeTeclas(e.key.toUpperCase()) }
 
 const teclas = document.querySelectorAll('.tecla')
