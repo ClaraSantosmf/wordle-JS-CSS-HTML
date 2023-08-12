@@ -4,7 +4,7 @@ let wordList = ["SAGAZ", "AMORA", "PINTO","AMAGO","NEGRO","EXITO","MEXER","TERMO
 const palavrasPossiveis ={
     '01':['APOIS', 'Pronto'],
     '02':['AVEXE','Se apresse'],
-    '03':['MUIDO', 'Confusão!'], 
+    '03':['MUIDO', 'Confusão!'],
     '04':['AVIAR', 'Apesar'],
     '05':['BANHA', 'Tomar banho'],
     '06':['BABAO', 'Puxa-saco'],
@@ -13,7 +13,7 @@ const palavrasPossiveis ={
     '09':['BULIR', 'Mexer'],
     '10':['TORAR', 'Forçar, intensidade'],
     '11':['CABRA', 'Homem'],
-    '12':['ACUNHA', 'Apresse'],
+    '12':['VIADO', 'Vocativo de amigo, pessoa animada'],
     '13':['BRIBA', 'Inceto'],
     '14':['FROXO', 'Pessoa com pouca coragem'],
     '15':['FILAR', 'Colar na escola'],

@@ -238,7 +238,3 @@ function tecladoVirtual(event) {
 
 document.body.addEventListener('keydown', passarTeclaApertada)
 document.getElementById("dica").innerText = dica
-
-// DESAFIOS
-// share, como compartilhar nas redes sociais? Tudo verdinho quando acabei
-
