@@ -6,7 +6,7 @@ https://www.nytimes.com/games/wordle/index.html
 Esse jogo tem sempre respostas em expressões nordestinas.
 https://clarasantosmf.github.io/wordle-JS-CSS-HTML/
 
-Wordle, o ponta pé inicial que passei está neste outro [repo aqui] (https://github.com/huogerac/letreiro-v2). 
+Wordle, o ponta pé inicial que passei está neste outro (repo aqui)[https://github.com/huogerac/letreiro-v2]. 
 
 * Verde posição correta, amarela para existe, mas em outra posição, cinza não existe ocorrência da letra.
 * Mudar de linha quando apertar ENTER
